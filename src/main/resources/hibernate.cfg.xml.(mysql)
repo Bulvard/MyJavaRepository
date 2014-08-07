@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/netbeans</property>   
+    <property name="connection.username">test</property>
+    <property name="connection.password">12345</property>
+    <property name="connection.pool_size">20</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="show_sql">false</property>
+    <property name="hbm2ddl.auto">create</property>
+    <property name="hibernate.connection.autocommit">false</property>
+    <property name="current_session_context_class">thread</property>
+
+	<!-- "Import" the mapping resources here -->
+
+	<mapping class="pkuc.hiber.Car"/>
+	<mapping class="pkuc.hiber.Mechanic"/>
+	<mapping class="pkuc.hiber.Service"/>
+    
+  </session-factory>
+</hibernate-configuration>
